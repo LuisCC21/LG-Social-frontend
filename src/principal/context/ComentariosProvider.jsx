@@ -11,7 +11,11 @@ const ComentarioProvider = ({ children }) => {
   const [post, setPost] = useState({})
 
   useEffect(() => {
-    socket = io(import.meta.env.VITE_BACKEND_URL)
+    socket = io(import.meta.env.VITE_BACKEND_URL, {
+      extraHeaders: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    })
   }, [])
 
   const addComment = async (datos) => {

@@ -33,7 +33,11 @@ export const Inicio = () => {
   const skeletonArray = [1, 2, 3, 4]
 
   useEffect(() => {
-    socket = io(import.meta.env.VITE_BACKEND_URL)
+    socket = io(import.meta.env.VITE_BACKEND_URL, {
+      extraHeaders: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    })
     return () => {
       socket.disconnect()
     }

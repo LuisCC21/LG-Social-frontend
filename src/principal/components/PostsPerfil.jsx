@@ -40,7 +40,11 @@ export const PostsPerfil = ({ publicacion }) => {
 
   // Conexion Socket
   useEffect(() => {
-    socket = io(import.meta.env.VITE_BACKEND_URL)
+    socket = io(import.meta.env.VITE_BACKEND_URL, {
+      extraHeaders: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    })
 
     return () => {
       socket.disconnect()
@@ -113,7 +117,7 @@ export const PostsPerfil = ({ publicacion }) => {
   })
 
   return (
-    <div className=' w-full  sm:w-10/12 2md:w-8/12 lg:w-6/12 xl:w-6/12   2xl:w-6/12 bg-gris-oscuro mx-auto pt-5 px-5 pb-2 md:rounded-md text-white mb-7  first-of-type:mb-0  md:mb-10'>
+    <div className=' w-full  sm:w-10/12  2md:w-10/12 lg:w-6/12 xl:w-6/12   2xl:w-6/12 bg-gris-oscuro mx-auto pt-5 px-5 pb-2 md:rounded-md text-white mb-7  first-of-type:mb-0  md:mb-10'>
       <div className='flex gap-2 justify-between items-center '>
         <div className='flex gap-7 items-center'>
           <div className='flex gap-2 items-center'>
