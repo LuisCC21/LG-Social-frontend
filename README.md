@@ -1,4 +1,4 @@
-# <p style="text-align:center; color:#0E3BBF;">Project - LG Social</p>
+# <p style="text-align:center; color:#0E3BBF;">Project - LG Social (Front-End)</p>
 
 <p >En esta pequeña red social podrás crear tus propias publicaciones, editarlas y eliminarlas. Además, tú y otros usuarios podrán reaccionar y comentar a todas las publicaciones, y tendrás la posibilidad de buscar personas y seguirlos si lo deseas.</p>
 
