@@ -21,6 +21,7 @@ const PostProvider = ({ children }) => {
   // Conectar Socket
   useEffect(() => {
     socket = io(import.meta.env.VITE_BACKEND_URL, {
+      withCredentials: true,
       extraHeaders: {
         'Access-Control-Allow-Origin': '*',
       },
