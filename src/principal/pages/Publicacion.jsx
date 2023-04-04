@@ -28,11 +28,7 @@ export const Publicacion = () => {
   }, [id, posts])
 
   useEffect(() => {
-    socket = io(import.meta.env.VITE_BACKEND_URL, {
-      extraHeaders: {
-        'Access-Control-Allow-Origin': '*',
-      },
-    })
+    socket = io(import.meta.env.VITE_BACKEND_URL)
     socket.emit('abrir publicacion', id)
 
     return () => {

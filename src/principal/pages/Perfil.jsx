@@ -34,11 +34,7 @@ export const Perfil = () => {
   const skeletonArray = [1, 2, 3, 4]
   // Conexion Socket
   useEffect(() => {
-    socket = io(import.meta.env.VITE_BACKEND_URL, {
-      extraHeaders: {
-        'Access-Control-Allow-Origin': '*',
-      },
-    })
+    socket = io(import.meta.env.VITE_BACKEND_URL)
 
     return () => {
       socket.disconnect()
