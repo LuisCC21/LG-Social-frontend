@@ -17,7 +17,7 @@ export const Login = () => {
   } = useForm()
 
   useEffect(() => {
-    auth._id && redirect('/inicio')
+    auth?._id && redirect('/inicio')
   }, [auth])
 
   const onSubmit = async (datos) => {
