@@ -100,7 +100,7 @@ export const Login = () => {
 
           <input
             type='submit'
-            value={'Iniciar Sesion'}
+            value={`${loading ? 'Inciando...' : 'Iniciar Sesion'}`}
             disabled={loading}
             className={`${
               loading && 'bg-opacity-50'

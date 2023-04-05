@@ -23,7 +23,6 @@ export const ConfirmarCuenta = () => {
           error: true,
         })
         setCuentaConfirmada(false)
-        /* setCuentaConfirmada(false) */
       }
     }
     confirmarUsuario()

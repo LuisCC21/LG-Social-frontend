@@ -113,7 +113,7 @@ export const PostsPerfil = ({ publicacion }) => {
   })
 
   return (
-    <div className=' w-full  sm:w-10/12  2md:w-10/12 lg:w-6/12 xl:w-6/12   2xl:w-6/12 bg-gris-oscuro mx-auto pt-5 px-5 pb-2 md:rounded-md text-white mb-7  first-of-type:mb-0  md:mb-10'>
+    <div className=' w-full  sm:w-10/12 md:w-11/12 lg:w-6/12 xl:w-6/12   2xl:w-6/12 shadow-md shadow-slate-500 bg-gris-oscuro mx-auto pt-5 px-5 pb-2 sm:rounded-md text-white mb-7  first-of-type:mb-0  md:mb-10'>
       <div className='flex gap-2 justify-between items-center '>
         <div className='flex gap-7 items-center'>
           <div className='flex gap-2 items-center'>
@@ -133,7 +133,7 @@ export const PostsPerfil = ({ publicacion }) => {
 
             <p className='capitalize font-semibold'>{nombre}</p>
             {auth._id === creador._id && (
-              <p className='text-xs font-semibold text-blue'>(You)</p>
+              <p className='text-xs font-semibold text-blue'>(Me)</p>
             )}
           </div>
         </div>
@@ -141,7 +141,6 @@ export const PostsPerfil = ({ publicacion }) => {
         {createdAt !== updatedAt && <span className='text-xs '>Editado</span>}
 
         <div className='flex gap-2 items-center '>
-          {/* TODO: Mejorar condiciones de fechas */}
           <p className='text-xs font-semibold font-inter'>
             {dias > 0 ? `${dias} d` : ''}
           </p>

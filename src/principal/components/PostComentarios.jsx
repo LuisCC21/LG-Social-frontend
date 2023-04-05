@@ -109,7 +109,7 @@ export const PostComentarios = ({ post }) => {
   })
 
   return (
-    <div className=' w-full  sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-6/12   2xl:w-6/12  bg-gris-oscuro mx-auto pt-5 px-5 pb-2 md:rounded-md text-white mb-7 first-of-type:mb-0  md:mb-10'>
+    <div className=' w-full  sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-6/12    2xl:w-6/12  bg-gris-oscuro mx-auto pt-5 px-5 pb-2 sm:rounded-md text-white mb-7 first-of-type:mb-0  md:mb-10 '>
       <div className='flex gap-2 justify-between items-center'>
         <div className='flex gap-7 items-center'>
           <div className='flex gap-2 items-center'>
@@ -134,7 +134,7 @@ export const PostComentarios = ({ post }) => {
               {nombre}
             </p>
             {auth._id === creador._id && (
-              <p className='text-xs font-semibold text-blue'>(You)</p>
+              <p className='text-xs font-semibold text-blue'>(Me)</p>
             )}
           </div>
           {auth._id !== creador._id && <ToggleSeguir creador={creador} />}
@@ -192,7 +192,7 @@ export const PostComentarios = ({ post }) => {
             <button
               className={` ${
                 yaDisLike ? 'bg-blue' : ''
-              } border border-gris hover:cursor-pointer px-2 py-0.5 font-bold rounded-lg active:scale-110 active:-rotate-[20deg] transition-all`}
+              } border border-gris hover:cursor-pointer px-2 py-0.5 font-bold rounded-lg active:scale-110 active:-rotate-[20deg] transition-all `}
               onClick={handleDisLike}
               disabled={loading}
             >
@@ -203,6 +203,7 @@ export const PostComentarios = ({ post }) => {
                 strokeWidth={1.5}
                 stroke='currentColor'
                 className='w-5 md:w-6 h-5 md:h-6'
+                disabled={loading}
               >
                 <path
                   strokeLinecap='round'

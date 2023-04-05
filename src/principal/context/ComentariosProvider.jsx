@@ -91,9 +91,6 @@ const ComentarioProvider = ({ children }) => {
   const submitComentario = (comment) => {
     if (Object.keys(post).length === 0) return
 
-    /*  const comentariosRepetidos = post.comentarios.some(comentarioState=> comentarioState._id === comentario._id)  */ // Verifica comentarios con el mismo id
-    /*   
-        if(!comentariosRepetidos){ */
     const publicacionActializada = { ...post }
     publicacionActializada.comentarios = [
       ...publicacionActializada?.comentarios,
@@ -102,7 +99,6 @@ const ComentarioProvider = ({ children }) => {
     setPost(publicacionActializada)
 
     setLoading(false)
-    /* } */
   }
 
   const comentarioEliminado = (idcomment) => {

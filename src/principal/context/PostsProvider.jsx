@@ -217,13 +217,6 @@ const PostProvider = ({ children }) => {
   const submitPublicacion = (publicacion) => {
     setPosts([...posts, publicacion])
     setLoading(false)
-
-    /* 
-        const publicacionRepetida =  posts.some((element)=>element._id === publicacion._id) */ // Para que no reenderize dos posts con mismo id
-    /*  if(!publicacionRepetida){ 
-           
-           
-        } */
   }
   const publicacionEliminada = (publicacionEliminada) => {
     const publicacionActualizada = posts.filter(

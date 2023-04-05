@@ -113,7 +113,7 @@ export const Posts = ({ publicacion }) => {
               {nombre}
             </p>
             {auth._id === creador._id && (
-              <p className='text-xs font-semibold text-blue'>(You)</p>
+              <p className='text-xs font-semibold text-blue'>(Me)</p>
             )}
           </div>
           {auth._id !== creador._id && <ToggleSeguir creador={creador} />}
@@ -121,7 +121,6 @@ export const Posts = ({ publicacion }) => {
         {createdAt !== updatedAt && <span className='text-xs '>Editado</span>}
 
         <div className='flex gap-2 items-center '>
-          {/* TODO: Mejorar condiciones de fechas */}
           <p className='text-xs font-semibold font-inter'>
             {dias > 0 ? `${dias} d` : ''}
           </p>
