@@ -100,7 +100,7 @@ export const Login = () => {
 
           <input
             type='submit'
-            value={`${loading ? 'Inciando...' : 'Iniciar Sesion'}`}
+            value={`${loading ? 'Iniciando...' : 'Iniciar Sesión'}`}
             disabled={loading}
             className={`${
               loading && 'bg-opacity-50'
@@ -119,7 +119,7 @@ export const Login = () => {
             to={'olvide-password'}
             className='text-center block my-5  text-blue uppercase text-xs font-semibold'
           >
-            Olvide mi Password
+            Olvide mí Password
           </Link>
         </nav>
       </div>
