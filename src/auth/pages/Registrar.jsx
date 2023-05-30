@@ -24,6 +24,19 @@ export const Registrar = () => {
   }
 
   const onSubmit = async (datos) => {
+    // Validaciones
+    if (datos.nombre.trim().length < 4) {
+      return handleAlerta({
+        msg: 'El usuario debe de tener min 4 caracteres',
+        error: true,
+      })
+    }
+    if (datos.password.trim().length < 8) {
+      return handleAlerta({
+        msg: 'La contraseña debe de tener min 8 caracteres',
+        error: true,
+      })
+    }
     if (datos.password !== datos.repetirPassword) {
       return handleAlerta({
         msg: 'Las contraseñas deben de ser iguales',
@@ -80,9 +93,10 @@ export const Registrar = () => {
             {...register('nombre', {
               required: true,
               minLength: 4,
-              maxLength: 16,
+              maxLength: 10,
             })}
           />
+
           {errors.nombre?.type === 'minLength' && (
             <span className='text-center text-md bg-red-500 text-white font-bold py-1 rounded-md block my-2'>
               El usuario debe de tener min 4 caracteres{' '}
@@ -90,7 +104,7 @@ export const Registrar = () => {
           )}
           {errors.nombre?.type === 'maxLength' && (
             <span className='text-center text-md bg-red-500 text-white font-bold py-1 rounded-md block my-2'>
-              El usuario no debe mas de 16 caracteres{' '}
+              El usuario no debe mas de 10 caracteres{' '}
             </span>
           )}
         </div>
@@ -165,7 +179,10 @@ export const Registrar = () => {
             className={`${
               errors.password?.type === 'required' && 'border-red-600 border'
             } w-full mt-3 p-2 border rounded-lg bg-gray-50 outline-none focus:border-blue`}
-            {...register('password', { required: true, minLength: 8 })}
+            {...register('password', {
+              required: true,
+              minLength: 8,
+            })}
           />
           {errors.password?.type === 'minLength' && (
             <span className='text-center text-md bg-red-500 text-white font-bold py-1 rounded-md block my-2'>
@@ -188,7 +205,9 @@ export const Registrar = () => {
               errors.repetirPassword?.type === 'required' &&
               'border-red-600 border'
             } w-full mt-3 p-2 border rounded-lg bg-gray-50 outline-none focus:border-blue`}
-            {...register('repetirPassword', { required: true })}
+            {...register('repetirPassword', {
+              required: true,
+            })}
           />
         </div>
 
