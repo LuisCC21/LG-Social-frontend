@@ -17,10 +17,6 @@ export const Registrar = () => {
       msg,
       error,
     })
-
-    setTimeout(() => {
-      setAlerta('')
-    }, 3000)
   }
 
   const onSubmit = async (datos) => {

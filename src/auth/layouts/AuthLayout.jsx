@@ -9,8 +9,8 @@ export const AuthLayout = () => {
         </h1>
       </div>
       <p className='text-center mt-3 text-sm font-bold text-blue'>
-        Si es tu primera peticion, espera minimo 2 minutos a que el backend
-        quite su modo descanso.
+        Si es tu primera peticion, espera minimo 2 minutos despues de la
+        peticion a que el backend quite su modo descanso.
       </p>
       <main className='container mx-auto mt-5 md:mt-15 2xl:mt-20  md:flex md:justify-center '>
         <div className='w-full p-3 flex  items-center flex-col lg:flex-row gap-10 lg:w-9/12'>
